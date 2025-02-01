@@ -1,10 +1,13 @@
 const mongoose=require("mongoose");
 // const mongoURL="mongodb://127.0.0.1:27017/hotels";
+const mongoURL=process.env.DB_URL;
+require("dotenv").config();
+// const mongoURL="mongodb+srv://abhinabadas02:iamf00L@abhi.dxq5y.mongodb.net/"
 // const dotnev=require("dotenv");
 // dotnev.config();
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/hotels",{
+mongoose.connect(mongoURL,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
